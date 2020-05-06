@@ -17,30 +17,32 @@ import { MessagesDropdownMenuComponent } from './main/header/messages-dropdown-m
 import { NotificationsDropdownMenuComponent } from './main/header/notifications-dropdown-menu/notifications-dropdown-menu.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './utils/guards/auth-interceptor';
+import { SharedModule } from './shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainComponent,
-    LoginComponent,
-    HeaderComponent,
-    FooterComponent,
-    MenuSidebarComponent,
-    BlankComponent,
-    ProfileComponent,
-    RegisterComponent,
-    MessagesDropdownMenuComponent,
-    NotificationsDropdownMenuComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-  ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MainComponent,
+        LoginComponent,
+        HeaderComponent,
+        FooterComponent,
+        MenuSidebarComponent,
+        BlankComponent,
+        ProfileComponent,
+        RegisterComponent,
+        MessagesDropdownMenuComponent,
+        NotificationsDropdownMenuComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        SharedModule
+    ],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

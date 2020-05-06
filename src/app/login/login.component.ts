@@ -8,7 +8,7 @@ import { AuthService } from '../utils/services/auth.service';
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class LoginComponent implements OnInit {
     public loginForm: FormGroup;
     constructor(
         private renderer: Renderer2,
@@ -17,7 +17,9 @@ export class LoginComponent implements OnInit, OnDestroy {
     ) { }
 
     ngOnInit() {
-        this.renderer.addClass(document.body, 'login-page');
+        this.authService.SignOut();
+        // this.renderer.addClass(document.body, 'login-page');
+        this.renderer.removeClass(document.body, 'register-page');
         this.loginForm = new FormGroup({
             email: new FormControl(null, Validators.required),
             password: new FormControl(null, Validators.required)
@@ -33,7 +35,4 @@ export class LoginComponent implements OnInit, OnDestroy {
         }
     }
 
-    ngOnDestroy() {
-        this.renderer.removeClass(document.body, 'login-page');
-    }
 }
