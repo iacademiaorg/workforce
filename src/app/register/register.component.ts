@@ -12,9 +12,12 @@ export class RegisterComponent implements OnInit {
 
     formGroup: FormGroup;
 
-    nameFormGroup: FormGroup;
-    emailFormGroup: FormGroup;
-
+    //nameFormGroup: FormGroup;
+    //emailFormGroup: FormGroup;
+    pattern = new RegExp(/^\d{5}(?:\d{2})?$/);
+    
+    
+    
     steps = [
         { label: 'Confirm your name', content: 'Last name, First name.' },
         { label: 'Confirm your contact information', content: '123-456-7890' },
@@ -41,15 +44,27 @@ export class RegisterComponent implements OnInit {
                     mobile : ['',Validators.required]
                 }),
                 this._formBuilder.group({
-                    emailFormCtrl: ['', Validators.email]
+                    emailFormCtrl: ['', Validators.email],
+                    street: ['', Validators.required],
+                    state: ['', Validators.required],
+                    city: ['', Validators.required],
+                    zip: ['', Validators.compose([Validators.required,Validators.pattern('[0-9]{6}')])]
+                   
+                    
+                    
+                }),
+                this._formBuilder.group({
+                    image:['',Validators.required]
                 }),
             ])
         });
 
-        this.registerForm = new FormGroup({
+        /*this.registerForm = new FormGroup({
             email: new FormControl(null, Validators.required),
             password: new FormControl(null, Validators.required)
-        });
+            
+            
+        });*/
     }
 
 }
