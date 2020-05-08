@@ -28,7 +28,9 @@ export class LoginComponent implements OnInit {
 
     logIn() {
         if (this.loginForm.valid) {
-            this.authService.SignIn("junaid", "1234")
+            var username = this.loginForm.value.email
+            var password = this.loginForm.value.password
+            this.authService.SignIn(username, password)
             this.appService.login();
         } else {
             //   this.toastr.error('Hello world!', 'Toastr fun!');

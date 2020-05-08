@@ -25,14 +25,17 @@ export class AuthService {
     }
 
     async SignIn(email: string, password: string) {
-        try {
-            this.userData = { displayName: 'admin', email: 'admin@test.com' };
-            this.storage.saveToken("tokenaccept")
-            this.storage.saveUserID(1)
-            this.router.navigate([''])
-        } catch (error) {
-            
+        if (email=="admin" && password == "1234") {
+            try {
+                this.userData = { displayName: 'admin', email: 'admin@test.com' };
+                this.storage.saveToken("tokenaccept")
+                this.storage.saveUserID(1)
+                this.router.navigate([''])
+            } catch (error) {
+    
+            }
         }
+        
     }
 
     get isLoggedIn(): boolean {
