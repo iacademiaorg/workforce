@@ -29,6 +29,11 @@ const routes: Routes = [
                 // component: DashboardComponent
                 loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule),
                 canActivate: [AuthGuard]
+            },
+            {
+                path: 'worker',
+                loadChildren: () => import('./pages/workers/worker.module').then(m => m.WorkerModule),
+                canActivate: [AuthGuard]
             }
         ]
     },

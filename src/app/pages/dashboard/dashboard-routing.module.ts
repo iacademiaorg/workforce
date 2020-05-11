@@ -5,14 +5,14 @@ import { AuthGuard } from 'src/app/utils/guards/auth.guard'
 
 const routes: Routes = [
     {
-        path: 'index',
+        path: 'dashboard',
         component: DashboardComponent,
         data: { title: 'Dashboard' },
         canActivate: [AuthGuard],
     },
     {
         path: '',
-        redirectTo: 'index',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
     }
 ]
