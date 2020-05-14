@@ -16,6 +16,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
@@ -35,7 +37,11 @@ import { MatNativeDateModule } from '@angular/material/core';
         MatSelectModule,
         MatStepperModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule
+        
     ],
     exports: [
         MatTabsModule,
@@ -54,7 +60,10 @@ import { MatNativeDateModule } from '@angular/material/core';
         MatSelectModule,
         MatStepperModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 
