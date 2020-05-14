@@ -34,7 +34,13 @@ const routes: Routes = [
                 path: 'worker',
                 loadChildren: () => import('./pages/workers/worker.module').then(m => m.WorkerModule),
                 canActivate: [AuthGuard]
+            },
+            {
+                path: 'zonalengineer',
+                loadChildren: () => import('./pages/zonalengineer/zonalengineer.module').then(m => m.ZonalengineerModule),
+                canActivate: [AuthGuard]
             }
+
         ]
     },
     {
