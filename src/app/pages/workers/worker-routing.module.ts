@@ -12,7 +12,7 @@ const routes: Routes = [
         canActivate: [AuthGuard],
     },
     {
-        path: 'addworker',
+        path: 'add-worker',
         component: AddWorkerComponent,
         data: { title: 'Add Worker' },
         canActivate: [AuthGuard],

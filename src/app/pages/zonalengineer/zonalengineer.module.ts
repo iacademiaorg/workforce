@@ -6,19 +6,15 @@ import { ZonalengineerRouterModule } from './zonalengineer-routing.module';
 import { AddZeComponent } from './add-ze/add-ze.component';
 
 const COMPONENTS = [
-  AddZeComponent
+    AddZeComponent
 ]
 
-
-
 @NgModule({
-  
-  imports: [
-    
-    ZonalengineerRouterModule,
-    
-    SharedModule
-  ],
-  declarations: [...COMPONENTS]
+
+    imports: [
+        ZonalengineerRouterModule,
+        SharedModule
+    ],
+    declarations: [...COMPONENTS]
 })
 export class ZonalengineerModule { }

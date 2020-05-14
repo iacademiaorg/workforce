@@ -18,53 +18,37 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+const MODULES = [
+    CommonModule,
+    MatTabsModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatButtonToggleModule,
+    MatSelectModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
+];
 
 @NgModule({
-    imports: [
-        MatTabsModule,
-        MatInputModule,
-        MatPaginatorModule,
-        MatProgressSpinnerModule,
-        MatSortModule,
-        MatTableModule,
-        MatIconModule,
-        MatButtonModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatSliderModule,
-        MatSlideToggleModule,
-        MatButtonToggleModule,
-        MatSelectModule,
-        MatStepperModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        BrowserModule,
-        FormsModule,
-        ReactiveFormsModule
-        
-    ],
-    exports: [
-        MatTabsModule,
-        MatInputModule,
-        MatPaginatorModule,
-        MatProgressSpinnerModule,
-        MatSortModule,
-        MatTableModule,
-        MatIconModule,
-        MatButtonModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatSliderModule,
-        MatSlideToggleModule,
-        MatButtonToggleModule,
-        MatSelectModule,
-        MatStepperModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        BrowserModule,
-        FormsModule,
-        ReactiveFormsModule
-    ]
+    imports: [...MODULES],
+    declarations:[],
+    exports: [...MODULES],
 })
 
 export class SharedModule { }
