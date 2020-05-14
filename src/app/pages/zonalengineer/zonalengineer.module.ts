@@ -1,14 +1,24 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { ZonalengineerRoutingModule } from './zonalengineer-routing.module';
+import { SharedModule } from 'src/app/shared.module'
+
+import { ZonalengineerRouterModule } from './zonalengineer-routing.module';
+import { AddZeComponent } from './add-ze/add-ze.component';
+
+const COMPONENTS = [
+  AddZeComponent
+]
+
 
 
 @NgModule({
-  declarations: [],
+  
   imports: [
-    CommonModule,
-    ZonalengineerRoutingModule
-  ]
+    
+    ZonalengineerRouterModule,
+    
+    SharedModule
+  ],
+  declarations: [...COMPONENTS]
 })
 export class ZonalengineerModule { }
