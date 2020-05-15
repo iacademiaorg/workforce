@@ -1,285 +1,40 @@
 <div class="card register-start">
     <div class="register-box2">
 
-        <div class="rownew" style="align-items: center;">
-            <!-- <img src="../../assets/img/chris-liverani-9cd8qOgeNIY-unsplash.jpg" style="width: 60%;"> -->
-            <img src="../../assets/img/chris-liverani-9cd8qOgeNIY-unsplash.jpg" style="width: 100%; height: 300px;">
-        </div>
-
-        <!-- <div class="register-logo">
-            <a href="../../index2.html"><b>Admin</b>LTE</a>
-
-        </div> -->
+        
 
         <div class="card">
             <div class="card-body register-card-body">
-                <h3 class="login-box-msg"><strong>Register a new membership</strong></h3>
-                <div>
-                    <!-- <h3>Linear Vertical Stepper Demo using a single form</h3> -->
-                    <form [formGroup]="formGroup">
-                        <mat-vertical-stepper #linearVerticalStepper="matVerticalStepper" formArrayName="formArray"
-                            [linear]="false">
-                            <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
-                                <ng-template matStepLabel>Personal Details</ng-template>
-                                <mat-form-field>
-                                    <mat-label>Full Name</mat-label>
-                                    <input matInput formControlName="name" required>
-                                    <mat-error>This field is required</mat-error>
-                                </mat-form-field>
-
-                                <mat-form-field>
-                                    <mat-label>Choose DoB</mat-label>
-                                    <input matInput [matDatepicker]="picker" formControlName="dob" required>
-                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                    <mat-datepicker #picker></mat-datepicker>
-                                    <mat-error>DoB is required</mat-error>
-                                </mat-form-field>
-
-                                <mat-form-field>
-                                    <mat-label>Age</mat-label>
-                                    <input matInput formControlName="age">
-                                    <mat-error>Age is required</mat-error>
-                                </mat-form-field>
-
-                                <mat-form-field>
-                                    <mat-label>Mobile</mat-label>
-                                    <input matInput formControlName="mobile" required>
-                                    <mat-error>Mobile is required</mat-error>
-                                </mat-form-field>
-
-                                <!-- <mat-form-field>
-                                    <mat-label>Favorite food</mat-label>
-                                    <mat-select>
-                                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                                            {{food.viewValue}}
-                                        </mat-option>
-                                    </mat-select>
-                                </mat-form-field> -->
-
-                                <div>
-                                    <button mat-button matStepperNext>Next</button>
+                <div class="two-columns--two-columns--t3o3b">
+                    <form data-purpose="form" class>
+                        <div class="two-columns-ia__group">
+                            <div class="two-columns-ia__group__section">
+                                <div class="form-group">
+                                    <label for="name" class="control-label" >
+                                        first name
+                                    </label>
+                                    <input name="name" data-purpose="edit-profile-first-name" maxlength="64" id="name" class="form-control">
                                 </div>
-                            </mat-step>
-
-                            <mat-step formGroupName="1" [stepControl]="formArray?.get([1])">
-                                <ng-template matStepLabel>
-                                    <div>Address Details</div>
-                                </ng-template>
-                               
-                                
-                                    <mat-form-field>
-                                        <mat-label>Street</mat-label>
-                                        <input matInput formControlName="street">
-                                        <mat-error>The input is invalid.</mat-error>
-                                    </mat-form-field>
-                                
-                                
-                                <div>
-                                    <mat-form-field>
-                                        <mat-label>City</mat-label>
-                                        <input matInput formControlName="city">
-                                        <mat-error>The input is invalid.</mat-error>
-                                    </mat-form-field>
-                                </div>
-                                <div>
-                                    <mat-form-field>
-                                        <mat-label>State</mat-label>
-                                        <input matInput formControlName="state">
-                                        <mat-error>The input is invalid.</mat-error>
-                                    </mat-form-field>
-                                    <mat-form-field>
-                                        <mat-label>Pincode</mat-label>
-                                        <input matInput formControlName="zip">
-                                        <mat-error>The input is invalid.</mat-error>
-                                    </mat-form-field>
-                                </div>
-                                <div>
-                                <mat-form-field>
-                                    <mat-label>Email address</mat-label>
-                                    <input matInput formControlName="emailFormCtrl">
-                                    <mat-error>The input is invalid.</mat-error>
-                                </mat-form-field>
                             </div>
-                                <div>
-                                    <button mat-button matStepperPrevious>Back</button>
-                                    <button mat-button matStepperNext>Next</button>
-                                </div>
-                            </mat-step>
+                                    <div class="two-columns-ia__group__section">
+                                        <div class="form-group">
+                                            <label for="name" class="control-label" >
+                                                first name
+                                            </label>
+                                            <input name="name" data-purpose="edit-profile-first-name" maxlength="64" id="name" class="form-control">
 
-                            <!-- <mat-step formGroupName="1" [stepControl]="formArray?.get([1])">
-                                <ng-template matStepLabel>
-                                    <div>Address Details</div>
-                                </ng-template>
-                                <mat-form-field>
-                                    <mat-label>Email address</mat-label>
-                                    <input matInput formControlName="emailFormCtrl">
-                                    <mat-error>The input is invalid.</mat-error>
-                                </mat-form-field>
-                                <div>
-                                    <button mat-button matStepperPrevious>Back</button>
-                                    <button mat-button matStepperNext>Next</button>
-                                </div>
-                            </mat-step> -->
-
-                            <mat-step formGroupName="1" [stepControl]="formArray?.get([2])">
-                                <ng-template matStepLabel>Upload Document</ng-template>
-                                <div>
-                                <label >
-                                    <mat-icon>add_a_photo</mat-icon>
-                                    add a photo
-                                 </label>
-                                 <input type="file"
-                                        
-                                        accept="image/jpeg, .jpeg, image/png, .png, image/pjpeg, .jpg">
-                                        <button type="submit">Submit</button>
-                                        </div>
                                     
-                                <!--mat-form-field>
-                                    <input matInput formControlName="image" class="file-input" type="file">
-                                    <button type="submit">Submit</button>
-                                    <mat-error>The input is invalid.</mat-error>
-                                </mat-form-field-->
-                                
-                                            <div>
-                                                <label >
-                                                    <mat-icon>add_a_file</mat-icon>
-                                                    add a pdf of Aadhar card
-                                                 </label>
-                                                 <input type="file"
-                                                        
-                                                        accept="application/pdf">
-                                                        <button type="submit">Submit</button>
-                                                        </div>
-                               <div>
-                                Everything seems correct.
-                               </div>
-                                <div>
-                                    <button mat-button>Done</button>
-                                    <button type="button" mat-button
-                                        (click)="linearVerticalStepper.reset()">Reset</button>
-                                </div>
-                            </mat-step>
-                        </mat-vertical-stepper>
+                            </div>  
+                        </div>
+                    
+                
+            </div>
                     </form>
                 </div>
 
-                <!-- <form [formGroup]="registerForm">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Full name" />
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email" />
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password" />
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Retype password" />
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="acceptTerms" />
-                                <label class="custom-control-label" for="acceptTerms">I agree to the <a
-                                        href="#">terms</a>
-                                </label>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                <!-- <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">
-                                Register
-                            </button>
-                        </div>
-                        <!-- /.col -->
-                <!-- </div>
-                </form> -->
-
-                <!-- <div class="social-auth-links text-center">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i>
-                        Sign up using Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i>
-                        Sign up using Google+
-                    </a>
-                </div> -->
-
-                <a [routerLink]="['/login']" class="text-center">I already have a membership</a>
-            </div>
-            <!-- /.form-box -->
-        </div>
-        <!-- /.card -->
-    </div>
-</div>
-
-<!-- <div>
-    <h3>Linear Vertical Stepper Demo using a single form</h3>
-    <form [formGroup]="formGroup">
-        <mat-vertical-stepper #linearVerticalStepper="matVerticalStepper" formArrayName="formArray" [linear]="false">
-            <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
-                <ng-template matStepLabel>Fill out your name</ng-template>
-                <mat-form-field>
-                    <mat-label>First name</mat-label>
-                    <input matInput formControlName="firstNameFormCtrl" required>
-                    <mat-error>This field is required</mat-error>
-                </mat-form-field>
-
-                <mat-form-field>
-                    <mat-label>Last name</mat-label>
-                    <input matInput formControlName="lastNameFormCtrl" required>
-                    <mat-error>This field is required</mat-error>
-                </mat-form-field>
-                <div>
-                    <button mat-button matStepperNext>Next</button>
+                
                 </div>
-            </mat-step>
-
-            <mat-step formGroupName="1" [stepControl]="formArray?.get([1])">
-                <ng-template matStepLabel>
-                    <div>Fill out your email address</div>
-                </ng-template>
-                <mat-form-field>
-                    <mat-label>Email address</mat-label>
-                    <input matInput formControlName="emailFormCtrl">
-                    <mat-error>The input is invalid.</mat-error>
-                </mat-form-field>
-                <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
                 </div>
-            </mat-step>
-
-            <mat-step>
-                <ng-template matStepLabel>Confirm your information</ng-template>
-                Everything seems correct.
-                <div>
-                    <button mat-button>Done</button>
-                    <button type="button" mat-button (click)="linearVerticalStepper.reset()">Reset</button>
                 </div>
-            </mat-step>
-        </mat-vertical-stepper>
-    </form>
-</div> -->
+                </div>
+                
