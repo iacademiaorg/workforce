@@ -11,50 +11,82 @@
                             <div class="two-columns-ia__group__section">
                                 Personal Details
                                 <div class="form-group">
-                                    <label for="name" class="control-label">First Name</label>
-                                    <input type="text" name="name" data-purpose="edit-profile-first-name" maxlength="64" id="name" class="form-control"  formControlName="name" required="required" >
-                                    <!--div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required</div-->
+                                    <mat-form-field>
+                                        <mat-label>First Name</mat-label>
+                                        <input matInput formControlName="name" required>
+                                        <mat-error>The input is invalid</mat-error>
+                                    </mat-form-field>
+    
                                 </div>
                                     <div class="form-group">
-                                        <label for="name" class="control-label">Last Name</label>
-                                        <input name="surname" data-purpose="edit-profile-surname" maxlength="64" id="surname" class="form-control" formControlName="name" required="required">
+                                        <mat-form-field>
+                                            <mat-label>last Name</mat-label>
+                                            <input matInput formControlName="name" required>
+                                            <mat-error>The input is invalid</mat-error>
+                                        </mat-form-field>
+        
                                     </div>
                                     <div class="form-group">
-                                        <label for="age" class="control-label">Age</label>
-                                        <input name="age" data-purpose="edit-profile-first-name" maxlength="2" id="name" class="form-control" formControlName="age" required="required">
+                                        <mat-form-field>
+                                            <mat-label>Age</mat-label>
+                                            <input matInput formControlName="age">
+                                            <mat-error>The input is invalid</mat-error>
+                                        </mat-form-field>
                                     </div>
+                                    <mat-form-field>
+                                        <mat-label>Mobile</mat-label>
+                                        <input matInput   formControlName="mobile" >
+                                        <mat-error>The input is invalid</mat-error>
+                                    </mat-form-field>
                                     <div class="form-group">
-                                        <label for="mobile" class="control-label">Mobile</label>
-                                        <input name="mobile" data-purpose="edit-profile-first-name" maxlength="10" id="name" class="form-control" formControlName="mobile" required="required">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="dob" class="control-label">DOB</label>
-                                        <input type="date" name="name" data-purpose="edit-profile-first-name"  id="name" class="form-control" formControlName="dob" required="required">
+                                        <mat-form-field>
+                                            <mat-label>Choose DoB</mat-label>
+                                            <input matInput [matDatepicker]="picker" formControlName="dob" required>
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                            <mat-error>The input is invalid</mat-error>
+                                        </mat-form-field>
                                     </div>
                         
                                 </div>
                                 <div class="two-columns-ia__group__section">
                                     Address details
                                     <div class="form-group">
-                                        <label for="street" class="control-label">Street</label>
-                                        <input name="street" data-purpose="edit-profile-first-name" maxlength="60" id="street" class="form-control" formControlName="street" required="required">
+                                        <mat-form-field>
+                                            <mat-label>Street</mat-label>
+                                            <input matInput formControlName="street">
+                                            <mat-error>The input is invalid.</mat-error>
+                                        </mat-form-field>
                                     </div>
                                         <div class="form-group">
-                                            <label for="city" class="control-label">City</label>
-                                            <input name="city" data-purpose="edit-profile-surname" maxlength="64" id="city" class="form-control" formControlName="city" required="required">
+                                            <mat-form-field>
+                                                <mat-label>City</mat-label>
+                                                <input matInput formControlName="city">
+                                                <mat-error>The input is invalid.</mat-error>
+                                            </mat-form-field>
                                         </div>
                                         <div class="form-group">
-                                            <label for="state" class="control-label">State</label>
-                                            <input name="state" data-purpose="edit-profile-surname" maxlength="64" id="state" class="form-control" formControlName="state" required="required">
+                                            <mat-form-field>
+                                                <mat-label>State</mat-label>
+                                                <input matInput formControlName="state">
+                                                <mat-error>The input is invalid.</mat-error>
+                                            </mat-form-field>
                                         </div>
                                         <div class="form-group">
-                                            <label for="zip" class="control-label">Pincode</label>
-                                            <input  name="zip" data-purpose="edit-profile-surname" maxlength="6" id="zip" class="form-control" formControlName="zip" required="required">
+                                            <mat-form-field>
+                                                <mat-label>Pincode</mat-label>
+                                                <input matInput formControlName="zip">
+                                                <mat-error>The input is invalid.</mat-error>
+                                            </mat-form-field>
+                                            
                                             
                                         </div>
                                         <div class="form-group">
-                                            <label for="emailFormCtrl" class="control-label">Email ID</label>
-                                            <input name="emailFormCtrl"  data-purpose="edit-profile-surname" type="email" id="emailFormCtrl" class="form-control" formControlName="emailFormCtrl" required="required">
+                                            <mat-form-field>
+                                                <mat-label>Email address</mat-label>
+                                                <input matInput formControlName="emailFormCtrl">
+                                                <mat-error>The input is invalid.</mat-error>
+                                            </mat-form-field>
                                             
                                             
                                         </div>
