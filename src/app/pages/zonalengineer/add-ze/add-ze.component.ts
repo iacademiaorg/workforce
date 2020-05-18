@@ -30,32 +30,24 @@ public registerForm: FormGroup;
 
 constructor(
     private renderer: Renderer2,
-    private _formBuilder: FormBuilder
+    private formBuilder: FormBuilder
 ) { }
 
 ngOnInit() {
-    this.formGroup = this._formBuilder.group({
-        formArray: this._formBuilder.array([
-            this._formBuilder.group({
+    this.formGroup = this.formBuilder.group({
+        
                 name : ['', Validators.required],
                 dob : ['', Validators.required],
                 age : [''],
-                mobile : ['',Validators.required]
-            }),
-            this._formBuilder.group({
-                emailFormCtrl: ['', Validators.email],
+                mobile : ['',Validators.required],
+                emailFormCtrl: ['', Validators.email,Validators.required,Validators.pattern("[^ @]*@[^ @]*")],
                 street: ['', Validators.required],
                 state: ['', Validators.required],
                 city: ['', Validators.required],
-                zip: ['', Validators.compose([Validators.required,Validators.pattern('[0-9]{6}')])]
-               
-                
-                
-            }),
-            this._formBuilder.group({
-                image:['',Validators.required]
-            }),
-        ])
+                zip: ['', Validators.compose([Validators.required,Validators.pattern('[0-9]{6}')])],
+               image:['',Validators.required]
+        
+    
     });
 
     /*this.registerForm = new FormGroup({
@@ -65,5 +57,13 @@ ngOnInit() {
         
     });*/
 }
+onSubmit() {
+    
+    
 
+    if (this.formGroup.valid) {
+        console.log("Form Submitted!");
+        this.formGroup.reset();
+  }
+}
 }
