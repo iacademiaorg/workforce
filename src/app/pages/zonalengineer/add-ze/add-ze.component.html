@@ -6,35 +6,72 @@
         <div class="card">
             <div class="card-body register-card-body">
                 <div class="two-columns--two-columns--t3o3b">
-                    <form data-purpose="form" class>
+                    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" name="ze" #heroForm="ngForm">
                         <div class="two-columns-ia__group">
                             <div class="two-columns-ia__group__section">
+                                Personal Details
                                 <div class="form-group">
-                                    <label for="name" class="control-label" >
-                                        first name
-                                    </label>
-                                    <input name="name" data-purpose="edit-profile-first-name" maxlength="64" id="name" class="form-control">
+                                    <label for="name" class="control-label">First Name</label>
+                                    <input type="text" name="name" data-purpose="edit-profile-first-name" maxlength="64" id="name" class="form-control"  formControlName="name" required="required" >
+                                    <!--div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required</div-->
                                 </div>
-                            </div>
-                                    <div class="two-columns-ia__group__section">
+                                    <div class="form-group">
+                                        <label for="name" class="control-label">Last Name</label>
+                                        <input name="surname" data-purpose="edit-profile-surname" maxlength="64" id="surname" class="form-control" formControlName="name" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="age" class="control-label">Age</label>
+                                        <input name="age" data-purpose="edit-profile-first-name" maxlength="2" id="name" class="form-control" formControlName="age" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mobile" class="control-label">Mobile</label>
+                                        <input name="mobile" data-purpose="edit-profile-first-name" maxlength="10" id="name" class="form-control" formControlName="mobile" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dob" class="control-label">DOB</label>
+                                        <input type="date" name="name" data-purpose="edit-profile-first-name"  id="name" class="form-control" formControlName="dob" required="required">
+                                    </div>
+                        
+                                </div>
+                                <div class="two-columns-ia__group__section">
+                                    Address details
+                                    <div class="form-group">
+                                        <label for="street" class="control-label">Street</label>
+                                        <input name="street" data-purpose="edit-profile-first-name" maxlength="60" id="street" class="form-control" formControlName="street" required="required">
+                                    </div>
                                         <div class="form-group">
-                                            <label for="name" class="control-label" >
-                                                first name
-                                            </label>
-                                            <input name="name" data-purpose="edit-profile-first-name" maxlength="64" id="name" class="form-control">
-
+                                            <label for="city" class="control-label">City</label>
+                                            <input name="city" data-purpose="edit-profile-surname" maxlength="64" id="city" class="form-control" formControlName="city" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="state" class="control-label">State</label>
+                                            <input name="state" data-purpose="edit-profile-surname" maxlength="64" id="state" class="form-control" formControlName="state" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="zip" class="control-label">Pincode</label>
+                                            <input  name="zip" data-purpose="edit-profile-surname" maxlength="6" id="zip" class="form-control" formControlName="zip" required="required">
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="emailFormCtrl" class="control-label">Email ID</label>
+                                            <input name="emailFormCtrl"  data-purpose="edit-profile-surname" type="email" id="emailFormCtrl" class="form-control" formControlName="emailFormCtrl" required="required">
+                                            
+                                            
+                                        </div>
+                                        
+                            
+                                    </div>
+                            </div>
+                            <button data-purpose="profile-basics-submit-button" type="submit" class="btn btn-primary" >SUBMIT</button>
                                     
-                            </div>  
-                        </div>
-                    
-                
-            </div>
                     </form>
+                   </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 
-                </div>
-                </div>
-                </div>
-                </div>
+                
+                
                 
