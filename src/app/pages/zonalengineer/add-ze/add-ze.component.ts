@@ -36,16 +36,16 @@ constructor(
 ngOnInit() {
     this.formGroup = this.formBuilder.group({
         
-                name : ['', Validators.required],
-                dob : ['', Validators.required],
+                name : ['', [Validators.required]],
+                dob : ['', [Validators.required]],
                 age : [''],
-                mobile : ['',Validators.required],
-                emailFormCtrl: ['', Validators.email,Validators.required,Validators.pattern("[^ @]*@[^ @]*")],
-                street: ['', Validators.required],
-                state: ['', Validators.required],
-                city: ['', Validators.required],
-                zip: ['', Validators.compose([Validators.required,Validators.pattern('[0-9]{6}')])],
-               image:['',Validators.required]
+                mobile : ['',[Validators.required]],
+                emailFormCtrl: ['', [Validators.email,Validators.required,Validators.pattern("[^ @]*@[^ @]*")]],
+                street: ['', [Validators.required]],
+                state: ['', [Validators.required]],
+                city: ['',[ Validators.required]],
+                zip: ['', [Validators.compose([Validators.required,Validators.pattern('[0-9]{6}')])]],
+               image:['',[Validators.required]]
         
     
     });
