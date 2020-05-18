@@ -38,8 +38,8 @@ ngOnInit() {
         
                 name : ['', [Validators.required]],
                 dob : ['', [Validators.required]],
-                age : [''],
-                mobile : ['',[Validators.required]],
+                age : ['',[Validators.required,Validators.pattern('[0-9]{2}')]],
+                mobile : ['',[Validators.required,Validators.pattern('[0-9]{10}')]],
                 emailFormCtrl: ['', [Validators.email,Validators.required,Validators.pattern("[^ @]*@[^ @]*")]],
                 street: ['', [Validators.required]],
                 state: ['', [Validators.required]],
@@ -61,9 +61,9 @@ onSubmit() {
     
     
 
-    if (this.formGroup.valid) {
+    if (this.registerForm.valid) {
         console.log("Form Submitted!");
-        this.formGroup.reset();
+        this.registerForm.reset();
   }
 }
 }
