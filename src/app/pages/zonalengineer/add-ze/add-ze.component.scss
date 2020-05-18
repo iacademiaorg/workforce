@@ -1,1 +1,37 @@
 /* add styles below */
+.box
+    {
+  
+        width: 500px;
+        border: 1px solid black;
+        padding: 50px;
+        margin: 20px;
+      }
+    
+#middlebox{ 
+        float:left;  
+        
+        
+    } 
+    #leftbox { 
+        float:left;  
+        
+         
+    } 
+.two-columns--two-columns--t3o3b .two-columns-ia__group {
+      display: flex;
+  }
+  .two-columns--two-columns--t3o3b .two-columns-ia__group__section:first-child {
+    margin-right: 15px;
+}
+.two-columns--two-columns--t3o3b .two-columns-ia__group__section {
+  width: 50%;
+  min-width: 350px;
+  max-width: 500px;
+}
+* {
+  box-sizing: border-box;
+}
+div {
+  display: block;
+}
