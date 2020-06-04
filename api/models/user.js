@@ -71,7 +71,7 @@ var UserSchema = new Schema({
     type: Number,
     required: true
   }
-
-  module.exports = mongoose.model('user', UserSchema);
 });
+  module.exports = mongoose.model('user', UserSchema);
+
 
