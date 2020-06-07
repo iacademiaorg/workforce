@@ -3,7 +3,9 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
 
+
 const userRoutes = require('./routes/user');
+const adminRoutes = require('./routes/Admin');
 
 const app = express();
 
@@ -18,6 +20,8 @@ app.use(express.static("public"));
 //TODO
 
 app.use("/user", userRoutes);
+app.use("/Admin", adminRoutes);
+
 
 
 
