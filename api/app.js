@@ -9,6 +9,7 @@ const ajv = new Ajv();
 
 const userRoutes = require('./routes/user');
 const adminRoutes = require('./routes/Admin');
+
 const port = 3000;
 const app = express();
 
