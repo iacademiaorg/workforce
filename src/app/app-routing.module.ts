@@ -7,9 +7,6 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './utils/guards/auth.guard';
 import { NonAuthGuard } from './utils/guards/non-auth.guard';
-import { BrowseRecentComponent } from './pages/grievance/browse-recent/browse-recent.component';
-import { CheckStatusComponent } from './pages/grievance/check-status/check-status.component';
-import { RegisterGComponent } from './pages/grievance/register-g/register-g.component';
 
 const routes: Routes = [
     {
