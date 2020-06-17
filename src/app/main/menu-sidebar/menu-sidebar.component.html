@@ -52,8 +52,38 @@
                                 <p>Add Worker</p>
                             </a>
                         </li>
+                        <li class="nav-item has-treeview">
+                          <a [routerLink]="['/grievance/grievance-redressal']" class="nav-link">
+                              <i class="nav-icon fas fa-tachometer-alt"></i>
+                              <p>
+                                  Grievance Redressal
+                                  <i class="right fas fa-angle-left"></i>
+                              </p>
+                          </a>
+                          <ul class="nav nav-treeview">
+                              <li class="nav-item">
+                                <a [routerLink]="['/grievance/Grievance-registration']" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Grievance Registration</p>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                  <a [routerLink]="['/grievance/browsedashboard']" class="nav-link">
+                                      <i class="far fa-circle nav-icon"></i>
+                                      <p>Browse Recent Redressal</p>
+                                  </a>
+                              </li>
+                              <li class="nav-item">
+                                <a [routerLink]="['/grievance/check-status']" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Check Status</p>
+                                </a>
+                              </li>
+                           </ul>
                     </ul>
                 </li>
+
+
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                       <i class="nav-icon fas fa-chart-pie"></i>

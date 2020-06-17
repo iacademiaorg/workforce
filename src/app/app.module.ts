@@ -31,7 +31,7 @@ import { SharedModule } from './shared.module';
         ProfileComponent,
         RegisterComponent,
         MessagesDropdownMenuComponent,
-        NotificationsDropdownMenuComponent
+        NotificationsDropdownMenuComponent,
     ],
     imports: [
         BrowserModule,

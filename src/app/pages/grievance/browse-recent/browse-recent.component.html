@@ -1,0 +1,38 @@
+<h1 class="mt-4 mb-2">Browsing Recent Redressal</h1>
+
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Select an option to view the respective grievances</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+      <div id="accordion">
+        <!-- we are adding the .class so bootstrap.js collapse plugin detects it -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h4 class="card-title">
+              <a [routerLink]="['/grievance/solved-grievances']">
+                <b>Solved grievances</b>
+              </a>
+            </h4>
+          </div>
+
+        </div>
+        <div class="card card-primary">
+          <div class="card-header">
+            <h4 class="card-title">
+              <a [routerLink]="['/grievance/lodged-grievances']" >
+                Lodged Grievances
+              </a>
+            </h4>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>

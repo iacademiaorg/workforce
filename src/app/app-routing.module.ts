@@ -7,6 +7,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './utils/guards/auth.guard';
 import { NonAuthGuard } from './utils/guards/non-auth.guard';
+import { BrowseRecentComponent } from './pages/grievance/browse-recent/browse-recent.component';
+import { CheckStatusComponent } from './pages/grievance/check-status/check-status.component';
+import { RegisterGComponent } from './pages/grievance/register-g/register-g.component';
 
 const routes: Routes = [
     {
@@ -39,7 +42,17 @@ const routes: Routes = [
                 path: 'zonalengineer',
                 loadChildren: () => import('./pages/zonalengineer/zonalengineer.module').then(m => m.ZonalengineerModule),
                 canActivate: [AuthGuard]
-            }
+            },
+            {
+              path: 'grievance',
+              loadChildren: () => import('./pages/grievance/grievance.module').then(m => m.GrievanceModule),
+              canActivate:[AuthGuard]
+            },
+            // {
+            //   path: 'grievance-dashboard',
+            //   component: GDashboardComponent,
+            //   canActivate: [AuthGuard]
+            // }
 
         ]
     },
