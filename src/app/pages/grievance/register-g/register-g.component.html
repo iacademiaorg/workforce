@@ -71,7 +71,7 @@
         <br>
         <div class="form-group">
                 <label> Relevant Law-section for the complaint</label>
-                <input type="text" #department="ngModel"  required class="form-control" [class.is-invalid]="department.invalid && department.touched" name="department" [(ngModel)]="userModel.department" >
+                <input type="text" #department="ngModel"  required class="form-control"  [(ngModel)]="userModel.department" >
           <!--       <small class="text-danger" [class.d-none]="department.valid || department.untouched">This is required</small> -->
               </div>
 
