@@ -39,7 +39,17 @@ const routes: Routes = [
                 path: 'zonalengineer',
                 loadChildren: () => import('./pages/zonalengineer/zonalengineer.module').then(m => m.ZonalengineerModule),
                 canActivate: [AuthGuard]
-            }
+            },
+            {
+              path: 'grievance',
+              loadChildren: () => import('./pages/grievance/grievance.module').then(m => m.GrievanceModule),
+              canActivate:[AuthGuard]
+            },
+            // {
+            //   path: 'grievance-dashboard',
+            //   component: GDashboardComponent,
+            //   canActivate: [AuthGuard]
+            // }
 
         ]
     },
