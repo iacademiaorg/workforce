@@ -1,0 +1,11 @@
+h2{
+    text-align:center;
+    color:black;
+    
+    font-weight:normal;
+    
+}
+input.ng-dirty.ng-valid{
+    border: 1px solid green;
+
+}
