@@ -41,8 +41,7 @@ export class RegisterComponent implements OnInit {
                     name : ['', Validators.required],
                     dob : ['', Validators.required],
                     age : [''],
-                    mobile : ['',Validators.required]
-                }),
+                    mobile : ['',Validators.compose([Validators.required,Validators.pattern('[0-9]{10}')])]}),
                 this._formBuilder.group({
                     emailFormCtrl: ['', Validators.email],
                     street: ['', Validators.required],
