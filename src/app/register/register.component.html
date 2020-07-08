@@ -54,6 +54,14 @@
                                     <mat-error>Mobile is required</mat-error>
                                 </mat-form-field>
                                 </div>
+                              
+                                 <div>
+                                 <mat-form-field>
+                                    <mat-label>Email address</mat-label>
+                                    <input matInput formControlName="emailFormCtrl">
+                                    <mat-error>The input is invalid.</mat-error>
+                                 </mat-form-field>
+                                 </div>
 
                                 <!-- <mat-form-field>
                                     <mat-label>Favorite food</mat-label>
@@ -77,7 +85,7 @@
                                 
                                     <mat-form-field>
                                         <mat-label>Street</mat-label>
-                                        <input matInput formControlName="street">
+                                        <input matInput formControlName="street" required>
                                         <mat-error>The input is invalid.</mat-error>
                                     </mat-form-field>
                                 
@@ -85,29 +93,23 @@
                                 <div>
                                     <mat-form-field>
                                         <mat-label>City</mat-label>
-                                        <input matInput formControlName="city">
+                                        <input matInput formControlName="city" required>
                                         <mat-error>The input is invalid.</mat-error>
                                     </mat-form-field>
                                 </div>
                                 <div>
                                     <mat-form-field>
                                         <mat-label>State</mat-label>
-                                        <input matInput formControlName="state">
+                                        <input matInput formControlName="state" required>
                                         <mat-error>The input is invalid.</mat-error>
                                     </mat-form-field>
                                     <mat-form-field>
                                         <mat-label>Pincode</mat-label>
-                                        <input matInput formControlName="zip">
+                                        <input matInput formControlName="zip" required>
                                         <mat-error>The input is invalid.</mat-error>
                                     </mat-form-field>
                                 </div>
-                                <div>
-                                <mat-form-field>
-                                    <mat-label>Email address</mat-label>
-                                    <input matInput formControlName="emailFormCtrl">
-                                    <mat-error>The input is invalid.</mat-error>
-                                </mat-form-field>
-                            </div>
+                               
                                 <div>
                                     <button mat-button matStepperPrevious>Back</button>
                                     <button mat-button matStepperNext>Next</button>
