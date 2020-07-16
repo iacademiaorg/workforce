@@ -18,6 +18,11 @@ import { NotificationsDropdownMenuComponent } from './main/header/notifications-
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './utils/guards/auth-interceptor';
 import { SharedModule } from './shared.module';
+import { WorkerLawsComponent } from './worker-laws/worker-laws.component';
+
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
     declarations: [
@@ -32,13 +37,16 @@ import { SharedModule } from './shared.module';
         RegisterComponent,
         MessagesDropdownMenuComponent,
         NotificationsDropdownMenuComponent,
+        WorkerLawsComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
-        SharedModule
+        SharedModule,
+        Ng2SearchPipeModule,
+        FormsModule
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
