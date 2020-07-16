@@ -45,11 +45,6 @@ const routes: Routes = [
               loadChildren: () => import('./pages/grievance/grievance.module').then(m => m.GrievanceModule),
               canActivate:[AuthGuard]
             },
-            // {
-            //   path: 'grievance-dashboard',
-            //   component: GDashboardComponent,
-            //   canActivate: [AuthGuard]
-            // }
 
         ]
     },
@@ -63,6 +58,7 @@ const routes: Routes = [
         component: RegisterComponent,
         canActivate: [NonAuthGuard]
     },
+
     { path: '**', redirectTo: '' }
 ];
 

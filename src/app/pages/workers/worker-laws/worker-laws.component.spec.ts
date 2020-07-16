@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { WorkerLawsComponent } from './worker-laws.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 describe('WorkerLawsComponent', () => {
   let component: WorkerLawsComponent;

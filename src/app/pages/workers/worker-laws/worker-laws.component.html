@@ -1,0 +1,33 @@
+
+
+  <!-- <div class="search-container">
+  <div class="col-md-auto">
+  <div class="form-group form-control">
+    <input type="text" class="form-control" placeholder="Search Here for the Laws" [(ngModel)]="term">
+  </div>
+  </div>
+  </div> -->
+
+ <!-- | filter:term -->
+
+<div *ngFor="let item of filterData">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+    <div class="card collapsed-card">
+      <div class="card-header bg-olive">
+        <h1 class="card-title">{{item.lawTitle}}</h1>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+            <i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+      <div class="card-body" style="display: none;">
+        <h3>{{item.labourLaws}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

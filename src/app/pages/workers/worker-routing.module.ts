@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router'
 import { AuthGuard } from 'src/app/utils/guards/auth.guard'
 import { AddWorkerComponent } from './add-worker/add-worker.component'
 import { WorkerListComponent } from './worker-list/worker-list.component'
+import { WorkerLawsComponent } from './worker-laws/worker-laws.component'
+
 
 const routes: Routes = [
     {
@@ -16,6 +18,12 @@ const routes: Routes = [
         component: AddWorkerComponent,
         data: { title: 'Add Worker' },
         canActivate: [AuthGuard],
+    },
+    {
+      path:'worker-laws',
+      component: WorkerLawsComponent,
+      data: { title : 'Worker Laws'},
+      canActivate: [AuthGuard]
     },
     {
         path: '',
