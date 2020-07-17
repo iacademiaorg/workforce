@@ -19,9 +19,9 @@ const routes: Routes = [
     data: { title: 'grievance-redressal' }
   },
 {
-  path: 'browsedashboard',
+  path: 'browse-redressal',
   component: BrowseRecentComponent,
-  data: { title: 'browsedashboard' }
+  data: { title: 'browse-redressal' }
 },
 {
   path: 'check-status',
