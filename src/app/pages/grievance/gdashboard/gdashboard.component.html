@@ -1,7 +1,7 @@
 
 <div class="card">
   <div class="card-header bg-gray" >
-    <h1 style="text-align: center;"><b>GRIEVANCE REDRESSAL PORTAL</b></h1>
+    <h1 style="text-align: center;font-size: xx-large"><b>GRIEVANCE REDRESSAL PORTAL</b></h1>
 
     <p style="text-align: center;">The grievance redressal portal enables the workers to register their grievances using a safe and secure platform.</p>
 
@@ -9,67 +9,49 @@
   </div>
   <!-- /.card-header -->
   <div class="card-body">
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box">
-          <span class="info-box-icon bg-info elevation-1"><i class="fas fa-edit" style="font-size: 48px;color: white;"></i></span>
+    <!-- <a type="a" class="btn btn-secondary btn-lg btn-block">Block level a</a> -->
 
-          <div class="info-box-content">
-            <span class="info-box-text"><h3><b><a href='#/grievance/Grievance-registration' class="nav-link" style="color: black;">LODGE A GRIEVANCE</a></b></h3></span>
 
-            <p style="margin-left: 1.8% ;">Fill and submit the Grievance Form</p>
+    <table class="table table-borderless text-center">
+      <tbody>
+      <tr>
+        <td>
+          <a href="#/grievance/Grievance-registration" id="sections" class="btn btn-block btn-outline-info btn-lg"><i class="fas fa-edit" style="font-size: 40px;"></i><h4 style="font-size: 1.1rem;"><b>Lodge A Grievance</b></h4></a>
 
-          </div>
-          <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
-      </div>
-      <!-- /.col -->
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box mb-3">
-          <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-spinner" style="font-size: 48px;color: white;"></i></span>
+        <td>
+          <a href="#/grievance/check-status" id="sections" class="btn btn-block btn-outline-info btn-lg"><i class="fas fa-spinner" style="font-size: 40px;"></i><h4 style="font-size: 1.1rem;"><b>Track Progress</b></h4></a>
+        </td>
 
-          <div class="info-box-content">
-            <span class="info-box-text"><h3><b><a href='#/grievance/check-status' class="nav-link" style="color: black;">TRACK PROGRESS</a></b></h3></span>
-            <span><p style="margin-left: 1.8% ;">Track the progress of the grievance</p></span>
-          </div>
-          <!-- /.info-box-content -->
-          <!-- [routerLink]="['/grievance/check-status']" -->
-        </div>
-        <!-- /.info-box -->
-      </div>
-      <!-- /.col -->
+      </tr>
+      <tr>
+        <td>
+          <a href="#/worker/worker-laws" id="sections" class="btn btn-block btn-outline-info btn-lg"><i class="fas fa-balance-scale" style="font-size: 40px;"></i><h4 style="font-size: 1.1rem;"><b>Legal Advice</b></h4></a>
+        </td>
+        <td>
+          <a href="#/grievance/browse-redressal" id="sections" class="btn btn-block btn-outline-info btn-lg"><i class="fas fa-search" style="font-size: 40px;"></i><h4 style="font-size: 1.1rem;"><b>Browse Redressal</b></h4></a>
+        </td>
 
-      <!-- fix for small devices only -->
-      <div class="clearfix hidden-md-up"></div>
+      </tr>
 
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box mb-3">
-          <span class="info-box-icon bg-success elevation-1"><i class="fas fa-balance-scale" style="font-size: 48px;color: white;"></i></span>
+    </tbody></table>
 
-          <div class="info-box-content">
-            <span class="info-box-text"><h3><b><a href="#/worker/worker-laws" class="nav-link" style="color: black;">LEGAL ADVICE</a></b></h3></span>
-            <span><p style="margin-left: 1.8% ;">Browse through the labour laws to get acquainted to the legalities</p></span>
-          </div>
-          <!-- /.info-box-content -->
-          <!-- [routerLink]="['/worker/worker-laws']" -->
-        </div>
-        <!-- /.info-box -->
-      </div>
-      <!-- /.col -->
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box mb-3">
-          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-search" style="font-size: 48px;color: white;"></i></span>
 
-          <div class="info-box-content">
-            <span class="info-box-text"><h3><b><a href="#/grievance/browse-redressal" class="nav-link" style="color: black;">BROWSE RECENT REDRESSAL</a></b></h3></span>
-            <span><p style="margin-left: 1.8% ;">Navigate to the history section to search for the grievances</p></span>
-          </div>
-          <!-- /.info-box-content -->
-          <!-- [routerLink]="['/grievance/browse-recent-redressal']" -->
-        </div>
-        <!-- /.info-box -->
-      </div>
-      <!-- /.col -->
 
+
+
+
+
+
+  </div>
+
+  <!-- <div class="card-footer">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div> -->
+
+  <div class="card-footer">
+    <ul class="nav nav-pills">
+      <li> <a href="#/dashboard">Home</a></li>
+      <li> <a href="#/blank">Contact Us</a></li>
+    </ul>
   </div>
   </div>

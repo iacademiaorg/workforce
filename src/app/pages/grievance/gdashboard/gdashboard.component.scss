@@ -1,10 +1,29 @@
+.table-borderless text-center{
+    margin: 0 auto;
+    margin-top: 30%;
+}
+
+#sections{
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
+#sections:hover{
+  color: white;
+}
+
+li{
+  margin-right: 2em;
+}
 
 .card-body{
   background-image:url("../../../../assets/img/Background1.png") ;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height:100vh
+  // height: fit-content;
+
 }
 
 .col-12  {
