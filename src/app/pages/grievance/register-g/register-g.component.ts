@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/user';
 
+
 @Component({
   selector: 'app-register-g',
   templateUrl: './register-g.component.html',
@@ -23,12 +24,12 @@ export class RegisterGComponent  {
 
   onSubmit() {
     this.submitted = true;
-    
+
     console.log(this.userModel);
   }
 
-  
 
-  
+
+
 
 }

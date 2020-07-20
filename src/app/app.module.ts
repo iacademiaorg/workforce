@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -18,6 +17,9 @@ import { NotificationsDropdownMenuComponent } from './main/header/notifications-
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './utils/guards/auth-interceptor';
 import { SharedModule } from './shared.module';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
     declarations: [
@@ -32,13 +34,15 @@ import { SharedModule } from './shared.module';
         RegisterComponent,
         MessagesDropdownMenuComponent,
         NotificationsDropdownMenuComponent,
-    ],
+   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
-        SharedModule
+        SharedModule,
+        FormsModule,
+        Ng2SearchPipeModule
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

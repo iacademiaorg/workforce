@@ -8,6 +8,8 @@ import { LodgedComponent } from './browse-recent/lodged/lodged.component';
 import { SolvedComponent } from './browse-recent/solved/solved.component';
 import { BrowseRecentComponent } from './browse-recent/browse-recent.component';
 import{ ConfirmEqualValidatorDirective} from 'src/app/confirm-equal-validator.directive';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -16,9 +18,10 @@ import{ ConfirmEqualValidatorDirective} from 'src/app/confirm-equal-validator.di
     CommonModule,
     GrievanceRoutingModule,
     FormsModule,
- 
+    RouterModule
+
 
   ]
-  
+
 })
 export class GrievanceModule { }

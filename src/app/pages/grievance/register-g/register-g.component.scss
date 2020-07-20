@@ -11,13 +11,15 @@ input.ng-dirty.ng-valid{
 
 }
 
-.col-md-6{
+
+.card-default{
   margin: 0 auto;
-  margin-right: 35%;
-  padding: 2%;
+}
+
+.form-group{
+  width: 90%;
+  font-size: 0.8rem;
 }
 
 
-.card{
-  width: 150%;
-}
+
