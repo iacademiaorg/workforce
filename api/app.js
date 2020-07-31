@@ -9,6 +9,7 @@ const ajv = new Ajv();
 
 const userRoutes = require('./routes/user');
 const adminRoutes = require('./routes/Admin');
+const profile_zone_wiseRouter = require('../routes/user');
 
 const port = 3000;
 const app = express();
@@ -42,7 +43,6 @@ app.use(express.json());
 app.use("/user", userRoutes);
 app.use("/Admin", adminRoutes);
 
-
-
+app.use('profile_zone_wise', profile_zone_wiseRouter);
 
 app.listen(port, () => console.log('Server on port ${port}!'));

@@ -26,7 +26,7 @@ ZonalEngineerModFunction.get("/ViewAllZonalEngineers", async (req,res) =>{
 //Modify a ZonalEngineer Data                        //Verified to be working
 ZonalEngineerModFunction.patch("/EditZonalEngineer", async (req,res) => {
     const ZonalEngineerID = req.body.UID;
-    
+
     try{
         const updatedZonalEngineerData  = await ZonalEngineer.updateOne(
             { _id: ZonalEngineerID },

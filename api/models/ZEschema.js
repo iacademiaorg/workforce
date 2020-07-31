@@ -10,7 +10,6 @@ var ZonalEngineerSchema = mongoose.Schema({
     Password: {
         type: String,
         required: true
-        
     },
     Name: {
         type: String,
@@ -36,7 +35,7 @@ var ZonalEngineerSchema = mongoose.Schema({
     AlternateMobile: {
         type: String
     },
-   PermanentAddress: {
+  PermanentAddress: {
         type: String,
         required:true
     },
@@ -83,7 +82,7 @@ var ZonalEngineerSchema = mongoose.Schema({
 
 
 }
- 
 
- );
+
+);
 module.exports = mongoose.model('ZonalEngineer', ZonalEnginnerSchema);
