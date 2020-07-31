@@ -28,7 +28,7 @@ router.post("/signup", (req, res, next) => {
     wSecQue: req.body.wSecQue,
     wSecAns: req.body.wSecAns,
     wadhaar: req.body.wadhaar
- });
+});
   bcrypt.hash(wpassword,BCRYPT_SALT_ROUNDS)
   .then(function(hashedPassword)
   {

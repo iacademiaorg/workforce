@@ -7,7 +7,7 @@ const User = require("../models/ZEschema");
 
 router.post("/signup", (req, res, next) => {
    const ze = new ze({
-      _id: new mongoose.Types.ObjectId()
+      _id: new mongoose.Types.ObjectId(),
       ID: req.body.ID,
       Name: req.body.Name,
       DoB: req.body.DoB,
@@ -23,7 +23,7 @@ router.post("/signup", (req, res, next) => {
       LinkedinAccount: req.body.LinkedinAccount,
       Qualification: req.body.Qualification,
       WorkingAs: req.body.WorkingAs,
-      AccountID: req.body.AccountID
+      AccountID: req.body.AccountID,
       Experience: req.body.Experience
      });
      ze.save(function(err, ze) {
@@ -31,13 +31,13 @@ router.post("/signup", (req, res, next) => {
        console.log(" saved to ze collection.");
      });
     });
-    
-    
+
+
     router.post("/login", function(req, res){
-    
+
       const username = req.body.username;
       const password = req.body.password;
-      
+
       ze.findOne({Email:username}, function(err, foundze){
         if(err){
            res.send("<h1>got clicked</h1>");
@@ -49,10 +49,10 @@ router.post("/signup", (req, res, next) => {
             }
           }
         }
-       
+
        });
      });
-     
-     
-     
+
+
+
      module.exports = router;
